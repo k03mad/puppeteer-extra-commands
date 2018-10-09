@@ -1,0 +1,37 @@
+{
+  "name": "puppeteer-extra-commands",
+  "version": "0.0.1",
+  "description": "Some useful commands for puppeteer",
+  "maintainers": [
+    "Kirill Molchanov <k03.mad@gmail.com"
+  ],
+  "repository": "k03mad/puppeteer-extra-commands",
+  "engines": {
+    "node": ">=10"
+  },
+  "dependencies": {
+    "require.all": "2.0.4"
+  },
+  "devDependencies": {
+    "chai": "4.2.0",
+    "eslint": "5.6.1",
+    "eslint-config-k03mad": "0.3.4",
+    "eslint-plugin-const-case": "1.0.4",
+    "eslint-plugin-node": "7.0.1",
+    "eslint-plugin-promise": "4.0.1",
+    "eslint-plugin-unicorn": "6.0.1",
+    "mocha": "5.2.0",
+    "mocha-parallel-tests": "2.0.4",
+    "pre-commit": "1.2.2",
+    "puppeteer": "1.9.0"
+  },
+  "scripts": {
+    "clean": "rm -rf ./node_modules || true",
+    "lint": "eslint --report-unused-disable-directives ./ --cache --format codeframe && echo '\n\\033[34mESLinted!\\033[39m\n'",
+    "setup": "npm run clean && npm i",
+    "test": "mocha-parallel-tests tests --timeout 10000 --slow 5000",
+    "one-test": "mocha tests/$npm_config_test*.js --timeout 10000 --slow 5000"
+  },
+  "pre-commit": "lint",
+  "license": "MIT"
+}
