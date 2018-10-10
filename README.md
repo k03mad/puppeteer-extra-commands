@@ -14,7 +14,7 @@ const browser = await puppeteer.launch(options);
 const [page] = await browser.pages();
 ```
 
-And use commands this way
+And use [commands](https://github.com/k03mad/puppeteer-extra-commands/tree/master/commands) this way
 
 ```js
 const [text] = await p.getInnerText(page, '.myClass');
