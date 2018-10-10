@@ -1,4 +1,4 @@
-[![NPM](https://nodei.co/npm/puppeteer-extra-commands.png?downloads=true&stars=true)](https://nodei.co/npm/dom-walker/)
+[![NPM](https://nodei.co/npm/puppeteer-extra-commands.png?downloads=true&stars=true)](https://nodei.co/npm/puppeteer-extra-commands/)
 
 ![Build Status](https://travis-ci.org/k03mad/puppeteer-extra-commands.svg?branch=master) ![Dependencies](https://david-dm.org/k03mad/puppeteer-extra-commands.svg)
 
