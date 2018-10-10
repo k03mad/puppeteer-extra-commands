@@ -1,0 +1,7 @@
+tests
+screenshots
+.editorconfig
+.eslintcache
+.eslintrc.js
+.nvmrc
+.travis.yml
