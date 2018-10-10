@@ -1,7 +1,7 @@
 /**
  * Scroll page by px count
  * @param {Object} page of puppeteer
- * @param {Number{}} obj
+ * @param {Object} obj
  * @param {Number} obj.x px count for horizontal page scroll
  * @param {Number} obj.y px count for vertical page scroll
  */
