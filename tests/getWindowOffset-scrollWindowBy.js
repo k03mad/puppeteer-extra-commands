@@ -1,14 +1,11 @@
 const {expect} = require('chai');
+const {openLocalHtmlTest} = require('./lib/commands');
 const getWindowOffset = require('../commands/getWindowOffset');
 const options = require('./lib/browser');
 const puppeteer = require('puppeteer');
 const scrollWindowBy = require('../commands/scrollWindowBy');
 
 let browser, page;
-
-const data = {
-    url: 'https://en.wikipedia.org/wiki/Wikipedia',
-};
 
 before(async () => {
     browser = await puppeteer.launch(options);
@@ -17,8 +14,8 @@ before(async () => {
 
 describe(__filename, () => {
 
-    it(`Open ${data.url}`, async () => {
-        await page.goto(data.url);
+    it('Open test page', async () => {
+        await openLocalHtmlTest(page);
     });
 
     it('Should have zeros in window offset by default', async () => {
