@@ -2,9 +2,7 @@
 
 ![Build Status](https://travis-ci.org/k03mad/puppeteer-extra-commands.svg?branch=master) ![Dependencies](https://david-dm.org/k03mad/puppeteer-extra-commands.svg)
 
-# Tiny library with additional puppeteer commands
-
-## Commands
+## Tiny library with additional puppeteer commands
 
 Open browser
 
@@ -29,7 +27,7 @@ const offset = await p.getWindowOffset(page);
 console.log(offset) // {x: 0, y: 1000}
 ```
 
-## Tests
+### Tests
 
 ```bash
 npm run test
