@@ -4,28 +4,37 @@
 
 ## Tiny library with additional puppeteer commands
 
-Open browser
+Use commands whits way:
 
 ```js
 const puppeteer = require('puppeteer');
 const p = require('puppeteer-extra-commands');
 
-const browser = await puppeteer.launch(options);
-const [page] = await browser.pages();
+(async () => {
+    const browser = await puppeteer.launch(options);
+    const [page] = await browser.pages();
+
+    const frame = await p.switchToFrameByName(page, '.someIframe');
+    const [text] = await p.getInnerText(frame, '.myClass');
+    console.log(text) // 'this is a text from selector'
+})();
 ```
 
-And use [commands](https://github.com/k03mad/puppeteer-extra-commands/tree/master/commands) this way
+All available commands:
 
-```js
-const [text] = await p.getInnerText(page, '.myClass');
-console.log(text) // 'this is a text from selector'
-```
-```js
-await p.scrollWindowBy(page, {y: 1000});
+> [getAttribute](https://github.com/k03mad/puppeteer-extra-commands/blob/master/commands/getAttribute.js)
 
-const offset = await p.getWindowOffset(page);
-console.log(offset) // {x: 0, y: 1000}
-```
+> [getCssProperty](https://github.com/k03mad/puppeteer-extra-commands/blob/master/commands/getCssProperty.js)
+
+> [getInnerText](https://github.com/k03mad/puppeteer-extra-commands/blob/master/commands/getInnerText.js)
+
+> [getWindowOffset](https://github.com/k03mad/puppeteer-extra-commands/blob/master/commands/getWindowOffset.js)
+
+> [saveScreenshot](https://github.com/k03mad/puppeteer-extra-commands/blob/master/commands/saveScreenshot.js)
+
+> [scrollWindowBy](https://github.com/k03mad/puppeteer-extra-commands/blob/master/commands/scrollWindowBy.js)
+
+> [switchToFrameByName](https://github.com/k03mad/puppeteer-extra-commands/blob/master/commands/switchToFrameByName.js)
 
 ### Tests
 

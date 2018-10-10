@@ -10,6 +10,8 @@
     "node": ">=10"
   },
   "dependencies": {
+    "mkdirp": "0.5.1",
+    "moment": "2.22.2",
     "require.all": "2.0.4"
   },
   "devDependencies": {
@@ -32,9 +34,6 @@
     "test": "mocha-parallel-tests tests --timeout 15000 --slow 5000",
     "one-test": "mocha tests/$npm_config_test* --timeout 15000 --slow 5000"
   },
-  "pre-commit": [
-    "lint",
-    "test"
-  ],
+  "pre-commit": "lint",
   "license": "Unlicense"
 }

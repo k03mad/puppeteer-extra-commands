@@ -1,6 +1,6 @@
 const {expect} = require('chai');
 const {openLocalHtmlTest} = require('./lib/commands');
-const getInnerText = require('../commands/getInnerText');
+const getAttribute = require('../commands/getAttribute');
 const options = require('./lib/browser');
 const puppeteer = require('puppeteer');
 
@@ -8,14 +8,17 @@ let browser, page;
 
 const data = {
     one: {
+        attribute: 'href',
         selector: '.link.second',
-        text: ['link2'],
+        text: ['https://ya.ru'],
     },
     few: {
+        attribute: 'href',
         selector: '.link',
-        text: ['link1', 'link2'],
+        text: ['https://ya.ru', 'https://ya.ru'],
     },
     missing: {
+        attribute: 'href',
         selector: '.nosuchselector',
         exception: 'should have timeout error with missing selector',
         error: 'waiting for selector ".nosuchselector" failed: timeout 5000ms exceeded',
@@ -33,19 +36,19 @@ describe(__filename, () => {
         await openLocalHtmlTest(page);
     });
 
-    it('Should get text from selector with one match', async () => {
-        const text = await getInnerText(page, data.one.selector);
+    it('Should get attribute from selector with one match', async () => {
+        const text = await getAttribute(page, data.one.selector, data.one.attribute);
         expect(text).to.eql(data.one.text);
     });
 
-    it('Should get text from selector with few matches', async () => {
-        const text = await getInnerText(page, data.few.selector);
+    it('Should get attribute from selector with few matches', async () => {
+        const text = await getAttribute(page, data.few.selector, data.few.attribute);
         expect(text).to.eql(data.few.text);
     });
 
-    it('Should not get text from missing selector', async () => {
+    it('Should not get attribute from missing selector', async () => {
         try {
-            await getInnerText(page, data.missing.selector);
+            await getAttribute(page, data.missing.selector, data.missing.attribute);
             throw new Error(data.missing.exception);
         } catch (err) {
             expect(err.message).to.equal(data.missing.error);

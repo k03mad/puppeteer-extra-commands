@@ -1,3 +1,7 @@
 body {
     padding-bottom: 5000px;
 }
+
+.link.second {
+    border: solid;
+}

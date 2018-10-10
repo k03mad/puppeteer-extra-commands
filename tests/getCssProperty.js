@@ -1,6 +1,6 @@
 const {expect} = require('chai');
 const {openLocalHtmlTest} = require('./lib/commands');
-const getInnerText = require('../commands/getInnerText');
+const getCssProperty = require('../commands/getCssProperty');
 const options = require('./lib/browser');
 const puppeteer = require('puppeteer');
 
@@ -8,14 +8,17 @@ let browser, page;
 
 const data = {
     one: {
+        property: 'border',
         selector: '.link.second',
-        text: ['link2'],
+        text: ['3px solid rgb(0, 0, 238)'],
     },
     few: {
+        property: 'border',
         selector: '.link',
-        text: ['link1', 'link2'],
+        text: ['0px none rgb(0, 0, 238)', '3px solid rgb(0, 0, 238)'],
     },
     missing: {
+        property: 'border',
         selector: '.nosuchselector',
         exception: 'should have timeout error with missing selector',
         error: 'waiting for selector ".nosuchselector" failed: timeout 5000ms exceeded',
@@ -33,19 +36,19 @@ describe(__filename, () => {
         await openLocalHtmlTest(page);
     });
 
-    it('Should get text from selector with one match', async () => {
-        const text = await getInnerText(page, data.one.selector);
+    it('Should get css property from selector with one match', async () => {
+        const text = await getCssProperty(page, data.one.selector, data.one.property);
         expect(text).to.eql(data.one.text);
     });
 
-    it('Should get text from selector with few matches', async () => {
-        const text = await getInnerText(page, data.few.selector);
+    it('Should get css property from selector with few matches', async () => {
+        const text = await getCssProperty(page, data.few.selector, data.few.property);
         expect(text).to.eql(data.few.text);
     });
 
-    it('Should not get text from missing selector', async () => {
+    it('Should not get css property from missing selector', async () => {
         try {
-            await getInnerText(page, data.missing.selector);
+            await getCssProperty(page, data.missing.selector, data.missing.property);
             throw new Error(data.missing.exception);
         } catch (err) {
             expect(err.message).to.equal(data.missing.error);
