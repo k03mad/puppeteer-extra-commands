@@ -10,15 +10,20 @@ const moment = require('moment');
  * @param {Object} options.folder to save screenshot
  */
 module.exports = async (page, {
+
     date = moment().format('YYYYMMDD'),
     time = moment().format('HHmmss'),
     folder = './screenshots/',
+
 } = {}) => {
+
     const subfolder = folder + date;
     await mkdirp(subfolder);
 
+    // ./screenshots/20181011/20181011_005412.png
     const path = `${subfolder}/${date}_${time}.png`;
     await page.screenshot({path});
 
     return path;
+
 };

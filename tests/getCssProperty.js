@@ -17,12 +17,6 @@ const data = {
         selector: '.link',
         text: ['0px none rgb(0, 0, 238)', '3px solid rgb(0, 0, 238)'],
     },
-    missing: {
-        property: 'border',
-        selector: '.nosuchselector',
-        exception: 'should have timeout error with missing selector',
-        error: 'waiting for selector ".nosuchselector" failed: timeout 5000ms exceeded',
-    },
 };
 
 before(async () => {
@@ -44,15 +38,6 @@ describe(__filename, () => {
     it('Should get css property from selector with few matches', async () => {
         const text = await getCssProperty(page, data.few.selector, data.few.property);
         expect(text).to.eql(data.few.text);
-    });
-
-    it('Should not get css property from missing selector', async () => {
-        try {
-            await getCssProperty(page, data.missing.selector, data.missing.property);
-            throw new Error(data.missing.exception);
-        } catch (err) {
-            expect(err.message).to.equal(data.missing.error);
-        }
     });
 
 });

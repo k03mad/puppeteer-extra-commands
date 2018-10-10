@@ -15,11 +15,6 @@ const data = {
         selector: '.link',
         text: ['link1', 'link2'],
     },
-    missing: {
-        selector: '.nosuchselector',
-        exception: 'should have timeout error with missing selector',
-        error: 'waiting for selector ".nosuchselector" failed: timeout 5000ms exceeded',
-    },
 };
 
 before(async () => {
@@ -41,15 +36,6 @@ describe(__filename, () => {
     it('Should get text from selector with few matches', async () => {
         const text = await getInnerText(page, data.few.selector);
         expect(text).to.eql(data.few.text);
-    });
-
-    it('Should not get text from missing selector', async () => {
-        try {
-            await getInnerText(page, data.missing.selector);
-            throw new Error(data.missing.exception);
-        } catch (err) {
-            expect(err.message).to.equal(data.missing.error);
-        }
     });
 
 });

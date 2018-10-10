@@ -17,12 +17,6 @@ const data = {
         selector: '.link',
         text: ['https://ya.ru', 'https://ya.ru'],
     },
-    missing: {
-        attribute: 'href',
-        selector: '.nosuchselector',
-        exception: 'should have timeout error with missing selector',
-        error: 'waiting for selector ".nosuchselector" failed: timeout 5000ms exceeded',
-    },
 };
 
 before(async () => {
@@ -44,15 +38,6 @@ describe(__filename, () => {
     it('Should get attribute from selector with few matches', async () => {
         const text = await getAttribute(page, data.few.selector, data.few.attribute);
         expect(text).to.eql(data.few.text);
-    });
-
-    it('Should not get attribute from missing selector', async () => {
-        try {
-            await getAttribute(page, data.missing.selector, data.missing.attribute);
-            throw new Error(data.missing.exception);
-        } catch (err) {
-            expect(err.message).to.equal(data.missing.error);
-        }
     });
 
 });
