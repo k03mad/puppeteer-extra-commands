@@ -32,6 +32,5 @@
     "test": "mocha-parallel-tests tests --timeout 10000 --slow 5000",
     "one-test": "mocha tests/$npm_config_test* --timeout 10000 --slow 5000"
   },
-  "pre-commit": "lint",
-  "license": "MIT"
+  "pre-commit": "lint"
 }
