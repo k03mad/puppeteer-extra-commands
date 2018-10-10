@@ -4,7 +4,7 @@
 
 ## Tiny library with additional puppeteer commands
 
-Use commands whits way:
+Use commands this way:
 
 ```js
 const puppeteer = require('puppeteer');
