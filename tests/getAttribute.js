@@ -10,12 +10,12 @@ const data = {
     one: {
         attribute: 'href',
         selector: '.link.second',
-        text: ['https://ya.ru'],
+        text: ['iframe.html'],
     },
     few: {
         attribute: 'href',
         selector: '.link',
-        text: ['https://ya.ru', 'https://ya.ru'],
+        text: ['https://ya.ru', 'iframe.html'],
     },
 };
 

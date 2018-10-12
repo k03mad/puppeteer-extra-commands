@@ -11,15 +11,17 @@ const p = require('puppeteer-extra-commands');
 (async () => {
     const browser = await puppeteer.launch(options);
     const [page] = await browser.pages();
+    await page.goto('http://example.com');
 
-    const frame = await p.switchToFrameByName(page, '.someIframe');
-    const [text] = await p.getInnerText(frame, '.myClass');
-    console.log(text) // 'this is a text from selector'
+    const [text] = await p.getInnerText(page, 'h1'); // 'Example Domain'
+    const [prop] = await p.getCssProperty(page, 'h1', 'font-size'); // '32px'
+    const [href] = await p.getAttribute(page, 'a', 'href'); // 'http://www.iana.org/domains/example'
 })();
 ```
 
 All available commands:
 
+> [clickForNavigation](https://github.com/k03mad/puppeteer-extra-commands/blob/master/commands/clickForNavigation.js)\
 > [getAttribute](https://github.com/k03mad/puppeteer-extra-commands/blob/master/commands/getAttribute.js)\
 > [getCssProperty](https://github.com/k03mad/puppeteer-extra-commands/blob/master/commands/getCssProperty.js)\
 > [getInnerText](https://github.com/k03mad/puppeteer-extra-commands/blob/master/commands/getInnerText.js)\
