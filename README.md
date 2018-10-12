@@ -1,6 +1,4 @@
-[![NPM](https://nodei.co/npm/puppeteer-extra-commands.png?downloads=true&stars=true)](https://nodei.co/npm/puppeteer-extra-commands/)
-
-![Build Status](https://travis-ci.org/k03mad/puppeteer-extra-commands.svg?branch=master) ![Dependencies](https://david-dm.org/k03mad/puppeteer-extra-commands.svg)
+![Build Status](https://travis-ci.org/k03mad/puppeteer-extra-commands.svg?branch=master) ![Dependencies](https://david-dm.org/k03mad/puppeteer-extra-commands.svg) ![Downloads](https://img.shields.io/npm/dt/puppeteer-extra-commands.svg) ![Size](https://img.shields.io/github/repo-size/k03mad/puppeteer-extra-commands.svg) ![NPM](https://img.shields.io/npm/v/puppeteer-extra-commands.svg) ![Node](https://img.shields.io/node/v/puppeteer-extra-commands.svg) ![LCommit](https://img.shields.io/github/last-commit/k03mad/puppeteer-extra-commands.svg)
 
 ## Tiny library with additional puppeteer commands
 
