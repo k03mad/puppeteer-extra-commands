@@ -9,13 +9,15 @@ const puppeteer = require('puppeteer');
 const p = require('puppeteer-extra-commands');
 
 (async () => {
-    const browser = await puppeteer.launch(options);
+    const browser = await puppeteer.launch();
     const [page] = await browser.pages();
-    await page.goto('http://example.com');
 
+    await page.goto('http://example.com');
     const [text] = await p.getInnerText(page, 'h1'); // 'Example Domain'
     const [prop] = await p.getCssProperty(page, 'h1', 'font-size'); // '32px'
     const [href] = await p.getAttribute(page, 'a', 'href'); // 'http://www.iana.org/domains/example'
+
+    await browser.close();
 })();
 ```
 
