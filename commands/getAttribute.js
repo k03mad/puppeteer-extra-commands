@@ -4,9 +4,5 @@
  * @param {String} selector of element
  */
 module.exports = (page, selector, attribute) => page.evaluate((sel, attr) => {
-
-    const output = [];
-    document.querySelectorAll(sel).forEach(elem => output.push(elem.getAttribute(attr)));
-    return output;
-
+    return [...document.querySelectorAll(sel)].map(elem => elem.getAttribute(attr));
 }, selector, attribute);

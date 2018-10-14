@@ -4,11 +4,5 @@
  * @param {String} selector of element
  */
 module.exports = (page, selector, property) => page.evaluate((sel, prop) => {
-
-    const output = [];
-    document.querySelectorAll(sel).forEach(elem => {
-        output.push(window.getComputedStyle(elem).getPropertyValue(prop));
-    });
-    return output;
-
+    return [...document.querySelectorAll(sel)].map(elem => window.getComputedStyle(elem).getPropertyValue(prop));
 }, selector, property);

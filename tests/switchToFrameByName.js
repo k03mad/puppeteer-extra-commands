@@ -1,7 +1,7 @@
 const {expect} = require('chai');
 const {openLocalHtmlTest} = require('./lib/commands');
 const switchToFrameByName = require('../commands/switchToFrameByName');
-const getInnerText = require('../commands/getInnerText');
+const getTextContent = require('../commands/getTextContent');
 const options = require('./lib/browser');
 const puppeteer = require('puppeteer');
 
@@ -31,7 +31,7 @@ describe(__filename, () => {
     });
 
     it('Should get text from iframe', async () => {
-        const text = await getInnerText(frame, data.frame.selector);
+        const text = await getTextContent(frame, data.frame.selector);
         expect(text).to.eql(data.frame.text);
     });
 

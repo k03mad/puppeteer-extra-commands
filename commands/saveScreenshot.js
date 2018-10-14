@@ -4,26 +4,20 @@ const moment = require('moment');
 /**
  * Save screenshot to folder with current date
  * @param {Object} page of puppeteer
- * @param {Object} options
- * @param {Object} options.date for folder and file name
- * @param {Object} options.time for file name
- * @param {Object} options.folder to save screenshot
+ * @param {Object} options pass options to page.screenshot
  */
-module.exports = async (page, {
+module.exports = async (page, options = {}) => {
+    if (!options.path) {
+        const date = moment().format('YYYYMMDD');
+        const time = moment().format('HHmmss');
 
-    date = moment().format('YYYYMMDD'),
-    time = moment().format('HHmmss'),
-    folder = './screenshots/',
+        const folder = `./screenshots/${date}`;
+        await mkdirp(folder);
 
-} = {}) => {
+        // ./screenshots/20181011/20181011_005412.png
+        options.path = `${folder}/${date}_${time}.png`;
+    }
 
-    const subfolder = folder + date;
-    await mkdirp(subfolder);
-
-    // ./screenshots/20181011/20181011_005412.png
-    const path = `${subfolder}/${date}_${time}.png`;
-    await page.screenshot({path});
-
-    return path;
-
+    await page.screenshot(options);
+    return options.path;
 };
