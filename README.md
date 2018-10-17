@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.org/k03mad/puppeteer-extra-commands.svg?branch=master)](https://travis-ci.org/k03mad/puppeteer-extra-commands) ![Dependencies](https://david-dm.org/k03mad/puppeteer-extra-commands.svg) ![LCommit](https://img.shields.io/github/last-commit/k03mad/puppeteer-extra-commands.svg)
+[![Build Status](https://travis-ci.org/k03mad/puppeteer-extra-commands.svg?branch=master)](https://travis-ci.org/k03mad/puppeteer-extra-commands) [![Dependencies](https://david-dm.org/k03mad/puppeteer-extra-commands.svg)](https://github.com/k03mad/puppeteer-extra-commands/blob/master/package.json) [![LCommit](https://img.shields.io/github/last-commit/k03mad/puppeteer-extra-commands.svg)](https://github.com/k03mad/puppeteer-extra-commands/commits/master)
 
-![NPM](https://img.shields.io/npm/v/puppeteer-extra-commands.svg) ![Node](https://img.shields.io/node/v/puppeteer-extra-commands.svg)
+[![Downloads](https://img.shields.io/npm/dt/puppeteer-extra-commands.svg)](https://www.npmjs.com/package/puppeteer-extra-commands) [![NPM](https://img.shields.io/npm/v/puppeteer-extra-commands.svg)](https://www.npmjs.com/package/puppeteer-extra-commands) ![Node](https://img.shields.io/node/v/puppeteer-extra-commands.svg)
 
 ![Size](https://img.shields.io/github/repo-size/k03mad/puppeteer-extra-commands.svg) [![install size](https://packagephobia.now.sh/badge?p=puppeteer-extra-commands)](https://packagephobia.now.sh/result?p=puppeteer-extra-commands)
 
