@@ -37,6 +37,17 @@ All available commands:
 > [switchToFrameByName](https://github.com/k03mad/puppeteer-extra-commands/blob/master/commands/switchToFrameByName.js)\
 > [switchToFrameByUrl](https://github.com/k03mad/puppeteer-extra-commands/blob/master/commands/switchToFrameByUrl.js)
 
+A little more abstract examples:
+
+```js
+const frame = await p.switchToFrameByName(page, 'auth');
+const text = await p.getTextContent(frame, '.titles'); // ['title1', 'title2', 'title3']
+
+const position = await p.getWindowOffset(page); // {x: 0; y: 0}
+await p.scrollWindowBy(page, {y: 100});
+const newPosition = await p.getWindowOffset(page); // {x: 0; y: 100}
+```
+
 ### Tests
 
 ```bash
