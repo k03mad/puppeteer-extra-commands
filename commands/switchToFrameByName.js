@@ -9,7 +9,7 @@ const {timeouts} = require('./lib/const');
 module.exports = async (page, name, timeout = timeouts.default) => {
     const startTime = Date.now();
 
-    // wait for iframe present with timeout
+    // wait for iframe display with timeout
     // useful when iframe appears after click
     while (Date.now() - startTime < timeout) {
         // find iframe by name
@@ -19,7 +19,7 @@ module.exports = async (page, name, timeout = timeouts.default) => {
             return frame;
         }
 
-        // timeout for iframe appears check
+        // wait within checks
         await page.waitFor(timeouts.short);
     }
 
