@@ -34,7 +34,7 @@ All available commands:
 > [getWindowOffset](https://github.com/k03mad/puppeteer-extra-commands/blob/master/commands/getWindowOffset.js)\
 > [saveScreenshot](https://github.com/k03mad/puppeteer-extra-commands/blob/master/commands/saveScreenshot.js)\
 > [scrollWindowBy](https://github.com/k03mad/puppeteer-extra-commands/blob/master/commands/scrollWindowBy.js)\
-> [switchToFrameByName](https://github.com/k03mad/puppeteer-extra-commands/blob/master/commands/switchToFrameByName.js)
+> [switchToFrameByName](https://github.com/k03mad/puppeteer-extra-commands/blob/master/commands/switchToFrameByName.js)\
 > [switchToFrameByUrl](https://github.com/k03mad/puppeteer-extra-commands/blob/master/commands/switchToFrameByUrl.js)
 
 ### Tests
