@@ -40,9 +40,12 @@ All available commands:
 ### Tests
 
 ```bash
+# run all
 npm run test
-npm run one-test --test=getInner
+
+# or one test
+npm run one-test --test=getText
 
 # disable headless mode
-npm run one-test --test=getInner --show
+npm run one-test --test=getText --show
 ```
