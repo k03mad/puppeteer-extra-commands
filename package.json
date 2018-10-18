@@ -1,6 +1,6 @@
 {
   "name": "puppeteer-extra-commands",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "Some useful commands for puppeteer",
   "maintainers": [
     "Kirill Molchanov <k03.mad@gmail.com"
@@ -10,7 +10,7 @@
     "node": ">=10"
   },
   "keywords": [
-
+    "puppeteer"
   ],
   "dependencies": {
     "mkdirp": "0.5.1",
