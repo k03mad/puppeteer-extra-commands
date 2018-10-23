@@ -4,8 +4,8 @@ const {timeouts} = require('./lib/const');
  * Switch to iframe by its url or part of url
  * @param {Object} page of puppeteer
  * @param {Function} key from page frames
- * @param {String} search element
- * @param {Number} timeout in ms for switch
+ * @param {string} search element
+ * @param {number} timeout in ms for switch
  */
 module.exports = async (page, key, search, timeout = timeouts.default) => {
     const startTime = Date.now();
