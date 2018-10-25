@@ -1,1 +1,1 @@
-module.exports = require('require.all')('./commands');
+module.exports = require('require-all')(`${__dirname}/commands`);
