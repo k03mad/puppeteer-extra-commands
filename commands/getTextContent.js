@@ -5,5 +5,5 @@
  * @returns {Promise}
  */
 module.exports = (page, selector) => page.evaluate(sel => {
-    return [...document.querySelectorAll(sel)].map(elem => elem.textContent);
+    return [...document.querySelectorAll(sel)].map(elem => elem.textContent.trim());
 }, selector);
