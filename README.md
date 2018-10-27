@@ -28,6 +28,7 @@ const p = require('puppeteer-extra-commands');
 All available commands:
 
 > [clickForNavigation](https://github.com/k03mad/puppeteer-extra-commands/blob/master/commands/clickForNavigation.js)\
+> [fillForm](https://github.com/k03mad/puppeteer-extra-commands/blob/master/commands/fillForm.js)\
 > [getAttribute](https://github.com/k03mad/puppeteer-extra-commands/blob/master/commands/getAttribute.js)\
 > [getCssProperty](https://github.com/k03mad/puppeteer-extra-commands/blob/master/commands/getCssProperty.js)\
 > [getTextContent](https://github.com/k03mad/puppeteer-extra-commands/blob/master/commands/getInnerText.js)\
