@@ -45,6 +45,11 @@ const text = await p.getTextContent(frame, '.titles'); // ['title1', 'title2', '
 const frame = await p.switchToFrameIncludes(page, 'name', 'auth');
 await p.scrollWindowBy(frame, {y: 100});
 const newPosition = await p.getWindowOffset(frame); // {x: 0; y: 100}
+// ...
+await p.fillForm(page, [
+    {selector: '.login', text: 'maggy1998'},
+    {selector: '.password', text: 'flower'}
+]);
 ```
 
 ### Tests
