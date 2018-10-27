@@ -20,9 +20,9 @@
   "devDependencies": {
     "chai": "4.2.0",
     "eslint": "5.8.0",
-    "eslint-config-k03mad": "0.4.4",
+    "eslint-config-k03mad": "0.4.5",
     "eslint-plugin-const-case": "1.0.4",
-    "eslint-plugin-node": "7.0.1",
+    "eslint-plugin-node": "8.0.0",
     "eslint-plugin-promise": "4.0.1",
     "eslint-plugin-unicorn": "6.0.1",
     "mocha": "5.2.0",
