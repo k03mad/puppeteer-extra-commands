@@ -19,8 +19,8 @@
   },
   "devDependencies": {
     "chai": "4.2.0",
-    "eslint": "5.8.0",
-    "eslint-config-k03mad": "0.5.2",
+    "eslint": "5.9.0",
+    "eslint-config-k03mad": "1.0.4",
     "eslint-plugin-const-case": "1.0.4",
     "eslint-plugin-node": "8.0.0",
     "eslint-plugin-promise": "4.0.1",
@@ -28,7 +28,7 @@
     "mocha": "5.2.0",
     "mocha-parallel-tests": "2.0.5",
     "pre-commit": "1.2.2",
-    "puppeteer": "1.9.0"
+    "puppeteer": "1.10.0"
   },
   "scripts": {
     "clean": "rm -rf ./node_modules || true",
