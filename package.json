@@ -1,6 +1,6 @@
 {
   "name": "puppeteer-extra-commands",
-  "version": "2.2.3",
+  "version": "2.2.4",
   "description": "Some useful commands for puppeteer",
   "maintainers": [
     "Kirill Molchanov <k03.mad@gmail.com"
@@ -20,10 +20,12 @@
   "devDependencies": {
     "chai": "4.2.0",
     "eslint": "5.9.0",
-    "eslint-config-k03mad": "1.0.4",
+    "eslint-config-k03mad": "1.2.0",
     "eslint-plugin-const-case": "1.0.4",
     "eslint-plugin-node": "8.0.0",
+    "eslint-plugin-optimize-regex": "1.1.6",
     "eslint-plugin-promise": "4.0.1",
+    "eslint-plugin-sort-requires": "2.1.0",
     "eslint-plugin-unicorn": "6.0.1",
     "mocha": "5.2.0",
     "mocha-parallel-tests": "2.0.5",
