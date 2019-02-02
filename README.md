@@ -48,8 +48,9 @@ await p.scrollWindowBy(frame, {y: 100});
 const newPosition = await p.getWindowOffset(frame); // {x: 0; y: 100}
 // ...
 await p.fillForm(page, [
-    {selector: '.login', text: 'maggy1998'},
-    {selector: '.password', text: 'flower'}
+    {field: '.login', text: 'maggy1998'},
+    {field: '.password', text: 'flower'},
+    {click: '.button'},
 ]);
 ```
 
