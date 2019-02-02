@@ -1,9 +1,11 @@
-const {expect} = require('chai');
-const {openLocalHtmlTest} = require('./lib/commands');
-const switchToFrameIncludes = require('../commands/switchToFrameIncludes');
+'use strict';
+
 const getTextContent = require('../commands/getTextContent');
 const options = require('./lib/browser');
 const puppeteer = require('puppeteer');
+const switchToFrameIncludes = require('../commands/switchToFrameIncludes');
+const {expect} = require('chai');
+const {openLocalHtmlTest} = require('./lib/commands');
 
 let browser, frame, page;
 

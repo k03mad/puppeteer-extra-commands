@@ -1,3 +1,5 @@
+'use strict';
+
 const {timeouts} = require('./lib/const');
 
 /**

@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = {
     timeouts: {
         short: 1000,

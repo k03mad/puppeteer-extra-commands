@@ -1,9 +1,11 @@
-const {expect} = require('chai');
-const {openLocalHtmlTest} = require('./lib/commands');
+'use strict';
+
 const getWindowOffset = require('../commands/getWindowOffset');
 const options = require('./lib/browser');
 const puppeteer = require('puppeteer');
 const scrollWindowBy = require('../commands/scrollWindowBy');
+const {expect} = require('chai');
+const {openLocalHtmlTest} = require('./lib/commands');
 
 let browser, page;
 

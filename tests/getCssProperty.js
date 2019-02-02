@@ -1,8 +1,10 @@
-const {expect} = require('chai');
-const {openLocalHtmlTest} = require('./lib/commands');
+'use strict';
+
 const getCssProperty = require('../commands/getCssProperty');
 const options = require('./lib/browser');
 const puppeteer = require('puppeteer');
+const {expect} = require('chai');
+const {openLocalHtmlTest} = require('./lib/commands');
 
 let browser, page;
 

@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Click to element which loaded new page and wait for navigation
  * @param {Object} page of puppeteer

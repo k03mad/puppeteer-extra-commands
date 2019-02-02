@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Get css property of page element
  * @param {Object} page of puppeteer

@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Get attribute of page element
  * @param {Object} page of puppeteer

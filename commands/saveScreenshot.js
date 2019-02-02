@@ -1,3 +1,5 @@
+'use strict';
+
 const mkdirp = require('mkdirp');
 const moment = require('moment');
 

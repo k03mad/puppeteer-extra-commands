@@ -1,3 +1,5 @@
+'use strict';
+
 const WIDTH = 1366;
 const HEIGHT = 768;
 

@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Get page window offset
  * @param {Object} page of puppeteer

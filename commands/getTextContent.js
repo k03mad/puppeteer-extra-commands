@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Get text content of page element
  * @param {Object} page of puppeteer

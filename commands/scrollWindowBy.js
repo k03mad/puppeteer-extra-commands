@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Scroll page by px count
  * @param {Object} page of puppeteer
