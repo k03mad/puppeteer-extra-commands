@@ -32,8 +32,11 @@ describe(__filename, () => {
     });
 
     it('Should fill and submit form', async () => {
-        await fillForm(page, [{selector: data.form.firstname, text: data.text.firstname}, {selector: data.form.lastname, text: data.text.lastname}]);
-        await page.click(data.form.submit);
+        await fillForm(page, [
+            {field: data.form.firstname, text: data.text.firstname},
+            {field: data.form.lastname, text: data.text.lastname},
+            {click: data.form.submit},
+        ]);
         await page.waitFor(100);
         const url = await page.url();
         expect(url).includes(`?firstname=${data.text.firstname}&lastname=${data.text.lastname}`);
