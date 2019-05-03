@@ -8,5 +8,5 @@
  */
 module.exports = (page, selector) => page.evaluate(
     sel => [...document.querySelectorAll(sel)].map(elem => elem.textContent.trim()),
-    selector
+    selector,
 );

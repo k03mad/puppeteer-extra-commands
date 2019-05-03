@@ -9,5 +9,5 @@
  */
 module.exports = (page, selector, attribute) => page.evaluate(
     (sel, attr) => [...document.querySelectorAll(sel)].map(elem => elem.getAttribute(attr)),
-    selector, attribute
+    selector, attribute,
 );

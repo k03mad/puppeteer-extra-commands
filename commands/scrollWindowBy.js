@@ -9,5 +9,5 @@
  */
 module.exports = (page, {x = 0, y = 0} = {}) => page.evaluate(
     (scrollX, scrollY) => window.scrollBy(scrollX, scrollY),
-    x, y
+    x, y,
 );
