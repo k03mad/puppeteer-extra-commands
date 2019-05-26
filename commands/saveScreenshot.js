@@ -1,23 +1,24 @@
 'use strict';
 
 const mkdirp = require('mkdirp');
-const moment = require('moment');
+const {date} = require('utils-mad');
 
 /**
  * Save screenshot to folder with current date
- * @param {Object} page of puppeteer
- * @param {Object} options pass options to page.screenshot
+ * @param {object} page of puppeteer
+ * @param {object} options pass options to page.screenshot
+ * @returns {string}
  */
 module.exports = async (page, options = {}) => {
     if (!options.path) {
-        const date = moment().format('YYYYMMDD');
-        const time = moment().format('HHmmss');
+        const day = date.now('YYYYMMDD');
+        const time = date.now('HHmmss');
 
-        const folder = `./screenshots/${date}`;
+        const folder = `./screenshots/${day}`;
         await mkdirp(folder);
 
         // ./screenshots/20181011/20181011_005412.png
-        options.path = `${folder}/${date}_${time}.png`;
+        options.path = `${folder}/${day}_${time}.png`;
     }
 
     await page.screenshot(options);

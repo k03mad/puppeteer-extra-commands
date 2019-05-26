@@ -6,7 +6,7 @@ module.exports = {
 
     /**
      * Open local index.html file for tests
-     * @param {Object} page of puppeteer
+     * @param {object} page of puppeteer
      * @returns {Promise}
      */
     openLocalHtmlTest: page => page.goto(`file:///${path.join(__dirname, '..', 'www', 'index.html')}`),

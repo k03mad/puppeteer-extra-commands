@@ -2,7 +2,7 @@
 
 /**
  * Get css property of page element
- * @param {Object} page of puppeteer
+ * @param {object} page of puppeteer
  * @param {string} selector of element
  * @param {string} property of element
  * @returns {Promise}

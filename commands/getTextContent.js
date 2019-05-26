@@ -2,7 +2,7 @@
 
 /**
  * Get text content of page element
- * @param {Object} page of puppeteer
+ * @param {object} page of puppeteer
  * @param {string} selector of element
  * @returns {Promise}
  */

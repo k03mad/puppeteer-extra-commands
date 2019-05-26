@@ -1,6 +1,6 @@
 {
   "name": "puppeteer-extra-commands",
-  "version": "2.2.9",
+  "version": "2.2.10",
   "description": "Some useful commands for puppeteer",
   "maintainers": [
     "Kirill Molchanov <k03.mad@gmail.com"
@@ -14,17 +14,16 @@
   ],
   "dependencies": {
     "mkdirp": "0.5.1",
-    "moment": "2.24.0",
     "require-all": "3.0.0",
-    "utils-mad": "1.8.3"
+    "utils-mad": "1.8.8"
   },
   "devDependencies": {
     "chai": "4.2.0",
     "eslint": "5.16.0",
-    "eslint-config-k03mad": "2.3.0",
+    "eslint-config-k03mad": "2.4.1",
     "eslint-plugin-const-case": "1.0.4",
-    "eslint-plugin-jsdoc": "4.8.3",
-    "eslint-plugin-node": "9.0.0",
+    "eslint-plugin-jsdoc": "7.0.2",
+    "eslint-plugin-node": "9.1.0",
     "eslint-plugin-optimize-regex": "1.1.6",
     "eslint-plugin-promise": "4.1.1",
     "eslint-plugin-sort-requires": "2.1.0",
@@ -32,7 +31,7 @@
     "mocha": "6.1.4",
     "mocha-parallel-tests": "2.1.0",
     "pre-commit": "1.2.2",
-    "puppeteer": "1.15.0"
+    "puppeteer": "1.17.0"
   },
   "scripts": {
     "clean": "rm -rf ./node_modules || true",
