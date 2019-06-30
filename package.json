@@ -1,6 +1,6 @@
 {
   "name": "puppeteer-extra-commands",
-  "version": "2.2.13",
+  "version": "2.2.14",
   "description": "Some useful commands for puppeteer",
   "maintainers": [
     "Kirill Molchanov <k03.mad@gmail.com"
@@ -15,7 +15,7 @@
   "dependencies": {
     "mkdirp": "0.5.1",
     "require-all": "3.0.0",
-    "utils-mad": "1.12.3"
+    "utils-mad": "1.12.4"
   },
   "devDependencies": {
     "chai": "4.2.0",
