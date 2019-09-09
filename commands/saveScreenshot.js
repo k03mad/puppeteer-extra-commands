@@ -11,7 +11,7 @@ const {date} = require('utils-mad');
  */
 module.exports = async (page, options = {}) => {
     if (!options.path) {
-        const day = date.now('YYYYMMDD');
+        const day = date.now('yyyyMMdd');
         const time = date.now('HHmmss');
 
         const folder = `./screenshots/${day}`;
