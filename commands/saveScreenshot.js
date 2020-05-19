@@ -1,7 +1,7 @@
 'use strict';
 
-const mkdirp = require('mkdirp');
 const {date} = require('utils-mad');
+const {promises: fs} = require('fs');
 
 /**
  * Save screenshot to folder with current date
@@ -11,11 +11,11 @@ const {date} = require('utils-mad');
  */
 module.exports = async (page, options = {}) => {
     if (!options.path) {
-        const day = date.now('yyyyMMdd');
+        const day = date.now('yyyyMMDD');
         const time = date.now('HHmmss');
 
         const folder = `./screenshots/${day}`;
-        await mkdirp(folder);
+        await fs.mkdir(folder, {recursive: true});
 
         // ./screenshots/20181011/20181011_005412.png
         options.path = `${folder}/${day}_${time}.png`;

@@ -4,3 +4,4 @@ screenshots
 .eslintrc.js
 .nvmrc
 .travis.yml
+.huskyrc.js
