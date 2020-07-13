@@ -7,9 +7,9 @@ const {timeouts} = require('./lib/const');
  * Fill form with data
  * @param {object} page of puppeteer
  * @param {object|Array<object>} data to fill
- * @param {string} data[].field of element fill
- * @param {string} data[].text to fill
- * @param {string} data[].click button to click
+ * @param {string} data.field of element fill
+ * @param {string} data.text to fill
+ * @param {string} data.click button to click
  * @param {object} waitOptions pass options to page.waiFor
  * @param {object} clickOptions pass options to page.click
  * @param {object} typeOptions pass options to page.type

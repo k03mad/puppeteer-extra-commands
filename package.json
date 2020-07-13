@@ -13,14 +13,13 @@
     "puppeteer"
   ],
   "dependencies": {
-    "require-all": "3.0.0",
-    "utils-mad": "8.0.3"
+    "utils-mad": "9.1.1"
   },
   "devDependencies": {
     "chai": "4.2.0",
-    "eslint": "7.1.0",
-    "eslint-config-k03mad": "5.0.0",
-    "eslint-plugin-jsdoc": "26.0.1",
+    "eslint": "7.4.0",
+    "eslint-config-k03mad": "5.0.2",
+    "eslint-plugin-jsdoc": "29.2.0",
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-promise": "4.2.1",
     "eslint-plugin-sonarjs": "0.5.0",
@@ -29,7 +28,7 @@
     "husky": "4.2.5",
     "mocha": "7.2.0",
     "mocha-parallel-tests": "2.3.0",
-    "puppeteer": "3.2.0"
+    "puppeteer": "5.1.0"
   },
   "scripts": {
     "clean": "rm -rf ./node_modules || true",
