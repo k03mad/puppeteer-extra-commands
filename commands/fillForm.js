@@ -1,4 +1,5 @@
 'use strict';
+/* eslint-disable unicorn/no-object-as-default-parameter */
 
 const {array} = require('utils-mad');
 const {timeouts} = require('./lib/const');
